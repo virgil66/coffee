@@ -1,4 +1,5 @@
 ;(function($){
+	
 	//header模块效果实现
 	$header = $('.header');   //header对象
 	$menuBtn = $header.find('.header-right'); //header-right对象
@@ -27,20 +28,8 @@
 			$menuBtn.fadeIn("fast");
 		},500);
 
-		if(index == 4){
-			
-		}
 	});
-	//侧边栏手风琴效果实现
-	var objType = {
-					"0":"index",
-					"1":"aboutBrand",
-					"2":"brandProject",
-					"3":"storeImage",
-					"4":"joinInformation",
-					"5":"joinUs",
-					"6":"message"
-	}
+	
 	$('.header .header-left').on('click',function(e){
 		var flag = $menu.hasClass('menu-show');
 		if(flag){
@@ -49,7 +38,7 @@
 				.removeClass('menu-show');
 			setTimeout(function(e){
 				$menuBtn.fadeIn("fast");
-			},500);
+			},300);
 		}
 	});
 
@@ -60,22 +49,19 @@
 		flag_n = $(this).parent().hasClass('has-child');
 		var index = $(this).parent().index();
 		index_level = $(this).parent().index();
-		console.log(flag_n)
 		$(this)
 			.siblings('.menu-level2').slideToggle("fast")
 			.parent()
 			.siblings()
 			.find('.menu-level2').slideUp("fast");
-		if(flag_n){
-			
-		}else{
+		if(!flag_n){
 			$menu
 				.addClass('menu-hide')
 				.removeClass('menu-show');
 
 			setTimeout(function(e){
 				$menuBtn.fadeIn("fast");
-			},500);	
+			},300);	
 		}
 		
 	});
@@ -101,7 +87,7 @@
 		setTimeout(function(e){
 			$menuBtn.fadeIn("fast");
 
-		},500);
+		},300);
 	})
 	
 
