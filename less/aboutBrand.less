@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import "common";
+@import "data";
+
+#about-brand{
+	.display(n);
+	.padding(49px 40px 22px);
+	// .margin-tp(@jo_pra);
+}
+.about-brand{
+	.width-max();
+	.company-introduce,
+	.brand-introduce,
+	.partner{
+		.width-max();
+		.padding-tp(@h_height);
+		h1.level-heading-1{
+			.color(@h_color);
+			.fontSize(@b_size1);
+			.margin-bm(@s_size0 + 4px);
+		}
+		h2.level-heading-2{
+			.color(@blod_color);
+			.fontSize(@s_size0);
+			.margin-lt(@m_height + 1);
+			.margin-bm(@r_sW - 2px);
+		}
+		.introduce-content{
+			.color(@com_color);
+			.fontSize(@b_size3);
+			.margin-lt(@b_size2 - 3px);
+			// .margin-bm(@s_size0 + 4px);
+			line-height: 1.8em;
+			.bold-font{
+				.color(@blod_color);
+				.fontSize(@s_size0);
+			}
+		}
+	}
+	.partner{
+		.partner-pics{
+			.width-max();
+			>img{
+				.width-max();
+			}
+		}
+	}
+}

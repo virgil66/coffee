@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import "common";
+@import "data";
+
+#message-consultation{
+	.display(n);
+	.padding(69px 12px 0);
+}
+
+.message-consultation{
+	.width-max();
+	>h1.level-heading-1{
+		.color(@h_color);
+		.fontSize(@b_size1);
+		.margin-bm(@m_height * 3);
+	}
+	.form-coat{
+		.width-max();
+		.padding(0 12px);
+		.message-content{
+			.width-max();
+			.message-name,
+			.message-email,
+			.message-phone,
+			.message-information{
+				.width-max();
+				.bgColor(@ms_bg);
+				.border-radius(@m_spacing);
+				>label{
+					.display(ib);
+					.margin(8.5px 9px);
+					.color(@im_bg);
+					.fontSize(@rm_shop);
+				}
+			}
+			.message-name,
+			.message-email,
+			.message-phone{
+				.height(@ms_re - 5px);
+				.margin-bm(@rm_iconW + 1px);
+				>input{
+					.fr();
+					.color(@im_bg);
+					.fontSize(@rm_shop);
+					.width(@rm_shop * 10);
+					.margin-rt(@rm_iconW - 1px);
+					.height(@b_size1 + 5px);
+					.margin-tp(@m_spacing - 1px);
+					.bgColor(@ms_bg);
+					.text-al(right);
+				}
+			}
+			.message-information{
+				.height(@b_size1 * 10);
+				>textarea{
+					resize: none;
+					.width(92%);
+					.height(244px);
+					.color(@im_bg);
+					.fontSize(@rm_shop);
+					.margin-lt(@rm_iconW - 1px);
+					.bgColor(@ms_bg);
+					border: none;
+					outline: none;
+				}
+			}
+			.message-btn{
+				.width(@b_size2 * 10);
+				.line-height(@h_height - 5px);
+				.border-radius(@m_spacing);
+				.bgColor(@h_color);
+				.fontSize(24px);
+				.color(@white);
+				.margin(30px auto 50px);
+				.text-al(center);
+			}
+		}
+	}
+}

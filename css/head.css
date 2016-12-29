@@ -1,0 +1,209 @@
+@charset "utf-8";
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 49px;
+  background-color: #004e7e;
+  *zoom: 1;
+}
+.header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header .header-left {
+  width: 166px;
+  margin: 5.5px 0 5.5px 14px;
+}
+.header .header-right {
+  display: inline-block;
+  margin: 13px 15px 0 0;
+  float: right;
+  display: inline;
+}
+.header .header-right > li {
+  width: 32px;
+  height: 5px;
+  background-color: #ffffff;
+}
+.header .header-right > li:nth-child(2) {
+  margin: 4px 0;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  right: -200px;
+  width: 180px;
+  box-shadow: -1px 0px 2px 0px #01253e;
+}
+.menu .menu-btn {
+  width: 100%;
+  height: 49px;
+  background-color: #004878;
+}
+.menu .menu-btn .menu-btn-groups {
+  display: inline-block;
+  margin: 13px 0 0 15px;
+  float: left;
+  display: inline;
+}
+.menu .menu-btn .menu-btn-groups > li {
+  width: 32px;
+  height: 5px;
+  background-color: #ffffff;
+}
+.menu .menu-btn .menu-btn-groups > li:nth-child(2) {
+  margin: 4px 0;
+}
+.menu-level {
+  width: 100%;
+}
+.menu-level .menu-level-list {
+  background-color: #004878;
+  margin-top: -1px;
+  *zoom: 1;
+}
+.menu-level .menu-level-list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.menu-level .menu-level-list .menu-level-links:not(.none-shadow) {
+  box-shadow: 0px 0px 5px 0px #003658;
+}
+.menu-level .menu-level-list .menu-level-links {
+  display: inline-block;
+  width: 100%;
+  height: 49px;
+  line-height: 49px;
+  *zoom: 1;
+}
+.menu-level .menu-level-list .menu-level-links:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.menu-level .menu-level-list .menu-level-links > span,
+.menu-level .menu-level-list .menu-level-links .menu-level-pics {
+  vertical-align: middle;
+}
+.menu-level .menu-level-list .menu-level-links > span {
+  float: right;
+  display: inline;
+  color: #eeeeee;
+  font-size: 21px;
+  font-family: "SimHei";
+}
+.menu-level .menu-level-list .menu-level-links .menu-level-pics {
+  float: right;
+  display: inline;
+  width: 10px;
+  margin: 19.5px 12px 19.5px 10px;
+}
+.menu-level .menu-level-list .menu-level-links .menu-level-shop {
+  float: right;
+  display: inline;
+  width: 18px;
+  margin: 14px 8px 14px 8px;
+}
+.menu-level .menu-level-list .menu-level2 {
+  display: none;
+  padding: 12px 0 18px 0;
+  box-sizing: border-box;
+}
+.menu-level .menu-level-list .menu-level2 .menu-level2-list:not(.tail) {
+  margin: 30px 0;
+}
+.menu-level .menu-level-list .menu-level2 .menu-level2-list {
+  *zoom: 1;
+}
+.menu-level .menu-level-list .menu-level2 .menu-level2-list:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.menu-level .menu-level-list .menu-level2 .menu-level2-list .menu-level2-links {
+  display: inline-block;
+  float: right;
+  display: inline;
+  font-size: 16px;
+  color: #eeeeee;
+  margin-right: 40px;
+  font-family: "STXihei";
+}
+.menu-level .menu-level-list:active {
+  background-color: #003b65;
+}
+.menu-show {
+  animation: bombLeft 0.5s ease-in-out forwards;
+  -webkit-animation: bombLeft 0.5s ease-in-out forwards;
+}
+@keyframes bombLeft {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@-webkit-keyframes bombLeft {
+  0% {
+    right: -200px;
+  }
+  100% {
+    right: 0;
+  }
+}
+.menu-hide {
+  animation: bombRight .5s ease forwards;
+  -webkit-animation: bombRight .5s ease forwards;
+}
+@keyframes bombRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -200px;
+  }
+}
+@-webkit-keyframes bombRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -200px;
+  }
+}
+.message-return {
+  position: fixed;
+  z-index: 1;
+  bottom: 21px;
+  right: 19px;
+  width: 46px;
+}
+.message-return .message-icon,
+.message-return .return-icon {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: alpha(opacity=8);
+}
+.message-return .message-icon {
+  background-color: #d7d7d7;
+}
+.message-return .message-icon > img {
+  width: 100%;
+}
+.message-return .return-icon {
+  background-color: #003051;
+  margin-top: 15px;
+}
+.message-return .return-icon > img {
+  width: 24px;
+  margin: 14.335px 11px 18.335px 11px;
+}

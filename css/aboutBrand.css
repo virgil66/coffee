@@ -1,0 +1,51 @@
+@charset "utf-8";
+#about-brand {
+  display: none;
+  padding: 49px 40px 22px;
+  box-sizing: border-box;
+}
+.about-brand {
+  width: 100%;
+}
+.about-brand .company-introduce,
+.about-brand .brand-introduce,
+.about-brand .partner {
+  width: 100%;
+  padding-top: 49px;
+  box-sizing: border-box;
+}
+.about-brand .company-introduce h1.level-heading-1,
+.about-brand .brand-introduce h1.level-heading-1,
+.about-brand .partner h1.level-heading-1 {
+  color: #004e7e;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+.about-brand .company-introduce h2.level-heading-2,
+.about-brand .brand-introduce h2.level-heading-2,
+.about-brand .partner h2.level-heading-2 {
+  color: #494949;
+  font-size: 20px;
+  margin-left: 6px;
+  margin-bottom: 12px;
+}
+.about-brand .company-introduce .introduce-content,
+.about-brand .brand-introduce .introduce-content,
+.about-brand .partner .introduce-content {
+  color: #666666;
+  font-size: 16px;
+  margin-left: 10px;
+  line-height: 1.8em;
+}
+.about-brand .company-introduce .introduce-content .bold-font,
+.about-brand .brand-introduce .introduce-content .bold-font,
+.about-brand .partner .introduce-content .bold-font {
+  color: #494949;
+  font-size: 20px;
+}
+.about-brand .partner .partner-pics {
+  width: 100%;
+}
+.about-brand .partner .partner-pics > img {
+  width: 100%;
+}

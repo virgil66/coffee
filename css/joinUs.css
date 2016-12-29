@@ -1,0 +1,111 @@
+@charset "utf-8";
+#join-us {
+  display: none;
+  padding: 69px 31px 90px;
+  box-sizing: border-box;
+}
+.join-us {
+  width: 100%;
+}
+.join-us .us-content {
+  width: 100%;
+}
+.join-us .us-content > h1.level-heading-1 {
+  color: #004e7e;
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+.join-us .us-content > h3.level-heading-2 {
+  color: #004e7e;
+  font-size: 13px;
+}
+.join-us .us-content .us-content-modal {
+  margin-top: 43px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+.join-us .us-content .us-content-modal > h1.level-heading-1 {
+  color: #004e7e;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.join-us .us-content .us-content-modal > h1.level-heading-1 > span {
+  margin-left: 11px;
+  font-size: 13px;
+  font-weight: 100;
+}
+.join-us .us-content .us-content-modal .us-modal-paragraph {
+  color: #494949;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.join-us .us-contact {
+  width: 100%;
+  margin-top: 60px;
+}
+.join-us .us-contact > h1.level-heading-1 {
+  color: #004e7e;
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+.join-us .us-contact > h3.level-heading-2 {
+  color: #004e7e;
+  font-size: 13px;
+}
+.join-us .us-contact .us-contact-modal {
+  width: 100%;
+  margin-top: 24px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information {
+  width: 100%;
+  *zoom: 1;
+  color: #494949;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information > img,
+.join-us .us-contact .us-contact-modal .us-contact-information > span {
+  vertical-align: middle;
+  float: left;
+  display: inline;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information > img {
+  width: 24px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information > span {
+  color: #494949;
+  font-size: 24px;
+  margin-left: 44px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:nth-child(1) {
+  margin-bottom: 26px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:nth-child(1) > img {
+  margin-top: 2px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:nth-child(1) > span {
+  margin-left: 24px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:nth-child(2) {
+  margin-bottom: 19px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:nth-child(2) > img {
+  margin-top: 8px;
+}
+.join-us .us-contact .us-contact-modal .us-contact-information:nth-child(2) > span {
+  margin-left: 24px;
+}
+@media screen and (max-width: 479px) {
+  .join-us .us-contact .us-contact-modal .us-contact-information:nth-child(3) > span {
+    margin-left: 44px;
+    margin-top: -32px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .join-us .us-contact .us-contact-modal .us-contact-information:nth-child(3) > span {
+    margin-left: 24px;
+  }
+}

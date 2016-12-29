@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import "common";
+@import "data";
+
+#brand-project{
+	.display(n);
+	.padding-tp(@h_height);
+}
+.brand-project{
+	.width-max();
+	.chain-stores{
+		.width-max();
+		>img{
+			.width-max();
+		}
+		.store-content{
+			.padding(22px 40px 100px);
+			h1.level-heading-1{
+				.color(@h_color);
+				.fontSize(@b_size1);
+				.margin-bm(@s_size0 + 4px);
+			}
+			.store-content-paragraph{
+				.color(@blod_color);
+				.fontSize(@b_size3);
+				line-height: 1.8em;
+			}
+		}
+	}
+	.one-space{
+		.width-max();
+		>img{
+			.width-max();
+		}
+		.space-content{
+			.padding(22px 40px 0);
+			h1.level-heading-1{
+				.color(@h_color);
+				.fontSize(@b_size1);
+				.margin-bm(@m_height);
+			}
+			.space-feature{
+				.color(@h_color);
+				.fontSize(@r_sW);
+				.margin-bm(@s_size0 + 1px);
+				.feature-1{
+					>span:first-child{
+						.margin-rt(@b_size2 - 0.5px);
+					}
+				}
+			}
+			h3.level-heading-2{
+				.color(@blod_color);
+				.fontSize(@s_size0);
+				.margin-bm(@s_size0 / 2);
+			}
+			.space-content-paragraph:nth-child(4){
+				.margin-bm(@m_spacing * 2);
+			}
+			.space-content-paragraph{
+				.color(@blod_color);
+				.fontSize(@b_size3);
+			}
+		}
+	}
+	.training-college{
+		.width-max();
+		.padding-tp(@s_height - 1px);
+		.college-content{
+			.width-max();
+			.padding(0 40px 78px);
+			h1.level-heading-1{
+				.color(@h_color);
+				.fontSize(@b_size1);
+				.margin-bm(@m_height);
+			}
+			.space-feature{
+				.color(@h_color);
+				.fontSize(@r_sW);
+				.margin-bm(@s_size0);
+				.feature-1{
+					>p:nth-child(2){
+						.margin(0 10px);
+					}
+				}
+			}
+			.college-content-paragraph:nth-child(3){
+				.margin-bm(@m_spacing * 2);
+			}
+			.college-content-paragraph{
+				.color(@blod_color);
+				.fontSize(@b_size3);
+			}
+		}
+	}
+	.coffee-bus{
+		.width-max();
+		>img{
+			.width-max();
+		}
+		.bus-content{
+			.width-max();
+			.padding(21px 40px 74px);
+			>h1.level-heading-1{
+				.color(@h_color);
+				.fontSize(@b_size1);
+				.margin-bm(@rm_bSize);
+			}
+			.bus-content-paragraph:nth-child(2){
+				.margin-bm(@r_sW);
+			}
+			.bus-content-paragraph{
+				.color(@blod_color);
+				.fontSize(@b_size3);
+			}
+		}
+	}
+	.online-platform{
+		.width-max();
+		.paltform-content{
+			.width-max();
+			.padding(0 40px 100px);
+			>h1.level-heading-1{
+				.color(@h_color);
+				.fontSize(@b_size1);
+				.margin-bm(@rm_bSize);
+			}
+			.platform-content-paragraph{
+				.color(@blod_color);
+				.fontSize(@b_size3);
+				.margin-bm(@r_sW);
+			}
+		}
+	}
+}

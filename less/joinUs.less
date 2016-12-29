@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import "common";
+@import "data";
+
+
+#join-us{
+	.display(n);
+	.padding(69px 31px 90px);
+}
+
+.join-us{
+	.width-max();
+	.us-content{
+		.width-max();
+		>h1.level-heading-1{
+			.color(@h_color);
+			.fontSize(@b_size1);
+			.margin-bm(@m_spacing - 1px);
+		}
+		>h3.level-heading-2{
+			.color(@h_color);
+			.fontSize(@b_size2);
+		}
+		.us-content-modal{
+			.margin-tp(@h_height - 6px);
+			.padding-lt(@rm_iconW + 2px);
+			>h1.level-heading-1{
+				.color(@h_color);
+				.fontSize(@rm_shop);
+				.margin-bm(@rm_shop);
+				>span{
+					.margin-lt(@rm_iconW + 1px);
+					.fontSize(@b_size2);
+					.fontWeight(100);
+				}
+			}
+			.us-modal-paragraph{
+				.color(@blod_color);
+				.fontSize(@b_size3);
+				.margin-bm(@b_size3);
+			}
+		}
+	}
+	.us-contact{
+		.width-max();
+		.margin-tp(@s_size0 * 3);
+		>h1.level-heading-1{
+			.color(@h_color);
+			.fontSize(@b_size1);
+			.margin-bm(@m_spacing - 1px);
+		}
+		>h3.level-heading-2{
+			.color(@h_color);
+			.fontSize(@b_size2);
+		}
+		.us-contact-modal{
+			.width-max();
+			.margin-tp(@m_spacing * 6);
+			.us-contact-information{
+				.width-max();
+				.clearfix;
+				.color(@blod_color);
+				>img,
+				>span{
+					vertical-align: middle;
+					.fl();
+				}
+				>img{
+					.width(@s_size0 + 4px);
+				}
+				>span{
+					.color(@blod_color);
+					.fontSize(@s_size0 + 4px);
+					.margin-lt(@b_heigth + 8px);
+				}
+			}
+			.us-contact-information:nth-child(1){
+				.margin-bm(@rm_bSize + 5px);
+				>img{
+					.margin-tp(@m_spacing / 2);
+				}
+				>span{
+					.margin-lt(@s_size0 + 4px);
+				}
+			}
+			.us-contact-information:nth-child(2){
+				.margin-bm(@s_size0 - 1px);
+				>img{
+					.margin-tp(@m_spacing * 2);
+				}
+				>span{
+					.margin-lt(@s_size0 + 4px);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 479px){
+	.join-us{
+		.us-contact{
+			.us-contact-modal{
+				.us-contact-information:nth-child(3){
+					>span{
+						.margin-lt(@b_heigth + 8px);
+						.margin-tp(-@b_size1 - 2px);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 480px){
+	.join-us{
+		.us-contact{
+			.us-contact-modal{
+				.us-contact-information:nth-child(3){
+					>span{
+						.margin-lt(@s_size0 + 4px);
+					}
+				}
+			}
+		}
+	}
+}

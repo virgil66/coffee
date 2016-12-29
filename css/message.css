@@ -1,0 +1,84 @@
+@charset "utf-8";
+#message-consultation {
+  display: none;
+  padding: 69px 12px 0;
+  box-sizing: border-box;
+}
+.message-consultation {
+  width: 100%;
+}
+.message-consultation > h1.level-heading-1 {
+  color: #004e7e;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.message-consultation .form-coat {
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.message-consultation .form-coat .message-content {
+  width: 100%;
+}
+.message-consultation .form-coat .message-content .message-name,
+.message-consultation .form-coat .message-content .message-email,
+.message-consultation .form-coat .message-content .message-phone,
+.message-consultation .form-coat .message-content .message-information {
+  width: 100%;
+  background-color: #d7d7d7;
+  border-radius: 4px;
+}
+.message-consultation .form-coat .message-content .message-name > label,
+.message-consultation .form-coat .message-content .message-email > label,
+.message-consultation .form-coat .message-content .message-phone > label,
+.message-consultation .form-coat .message-content .message-information > label {
+  display: inline-block;
+  margin: 8.5px 9px;
+  color: #999999;
+  font-size: 18px;
+}
+.message-consultation .form-coat .message-content .message-name,
+.message-consultation .form-coat .message-content .message-email,
+.message-consultation .form-coat .message-content .message-phone {
+  height: 41px;
+  margin-bottom: 11px;
+}
+.message-consultation .form-coat .message-content .message-name > input,
+.message-consultation .form-coat .message-content .message-email > input,
+.message-consultation .form-coat .message-content .message-phone > input {
+  float: right;
+  display: inline;
+  color: #999999;
+  font-size: 18px;
+  width: 180px;
+  margin-right: 9px;
+  height: 35px;
+  margin-top: 3px;
+  background-color: #d7d7d7;
+  text-align: right;
+}
+.message-consultation .form-coat .message-content .message-information {
+  height: 300px;
+}
+.message-consultation .form-coat .message-content .message-information > textarea {
+  resize: none;
+  width: 92%;
+  height: 244px;
+  color: #999999;
+  font-size: 18px;
+  margin-left: 9px;
+  background-color: #d7d7d7;
+  border: none;
+  outline: none;
+}
+.message-consultation .form-coat .message-content .message-btn {
+  width: 130px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 4px;
+  background-color: #004e7e;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 30px auto 50px;
+  text-align: center;
+}
