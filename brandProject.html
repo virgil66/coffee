@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>品牌项目</title>
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="stylesheet" href="css/head.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/aboutBrand.css">
+	<link rel="stylesheet" href="css/brandProject.css">
+	<link rel="stylesheet" href="css/storeImage.css">
+	<link rel="stylesheet" href="css/joinInformation.css">
+	<link rel="stylesheet" href="css/joinUs.css">
+	<link rel="stylesheet" href="css/message.css">
+	<script src="js/header.js"></script>
+</head>
+<body>
+	<!-- 品牌项目详细内容模块 -->
+	<div class="brand-project" id="brand-project">
+		<!-- 咖啡连锁店模块 -->
+		<div class="chain-stores" id="chain-stores">
+			<img src="images/bg_09.jpg" alt="咖啡连锁店" />
+			<div class="store-content">
+				<h1 class="level-heading-1">咖啡连锁店</h1>
+				<p class="store-content-paragraph">“壹杯加”为一家以商业、实业、金融业为背景的餐饮品牌，首期注册资金五千万元。致力于打造“咖啡+银行”模式的综合平台化咖啡连锁品牌，我们以咖啡店及银行相关配套服务为发展平台，并以此为基础发展出壹杯加创客空间、壹杯加咖啡俱乐部等，建立起一个集餐饮、休闲、创业、金融服务为一体的立体式多元化连锁基地。</p>
+			</div>
+		</div>
+		<!-- 壹+空间内容详情模块 -->
+		<div class="one-space" id="one-space">
+			<img src="images/bg_10.jpg" alt="壹+空间" />
+			<div class="space-content">
+				<h1 class="level-heading-1">壹+空间</h1>
+				<div class="space-feature">
+					<p class="feature-1">
+						<span>立体化</span>
+						<span>多元化</span>
+					</p>
+					<p class="feature-2">创造互联网时代办公模式2.0</p>
+				</div>
+				<h3 class="level-heading-2">创客宗旨</h3>
+				<p class="space-content-paragraph">提供集团内部可用资源，全面协助小微企业成长</p>
+				<p class="space-content-paragraph">不限领域，汇聚各行各业，综合化企业孵化器</p>
+			</div>
+		</div>
+		<!-- 培训学院内容详情模块 -->
+		<div class="training-college" id="training-college">
+			<div class="college-content">
+				<h1 class="level-heading-1">培训学院</h1>
+				<div class="space-feature">
+					<p class="feature-1">
+						<span>针对性</span>
+						<span>专业性</span>
+						<span>多样性</span>
+					</p>
+				</div>
+				<p class="college-content-paragraph">针对加盟商及门店营运人员提供专业性培训</p>
+				<p class="college-content-paragraph">开设咖啡西点、红酒雪茄等品鉴课程</p>
+			</div>
+		</div>
+		<!-- 移动咖啡车内容详情模块 -->
+		<div class="coffee-bus" id="coffee-bus">
+			<img src="images/bg_08.jpg" alt="移动咖啡车" />
+			<div class="bus-content">
+				<h1 class="level-heading-1">移动咖啡车</h1>
+				<p class="bus-content-paragraph">为拥有咖啡梦想的人提供便捷、快速、灵活的咖啡创业机会，鼓励咖啡产品领域的创新和发展</p>
+				<p class="bus-content-paragraph">提供环保动力车的租赁及相关证照办理、提供咖啡等饮品的原料统一配送以及制作培训等</p>
+			</div>
+		</div>
+		<!-- 网上支持平台内容详情模块 -->
+		<div class="online-platform" id="online-platform">
+			<div class="paltform-content">
+				<h1 class="level-heading-1">网上支持平台</h1>
+				<div class="platform-content-paragraph">提供即时采买、咨询、管控等便捷通道</div>
+				<div class="platform-content-paragraph">优化餐饮企业复杂的采购流程体系</div>
+				<div class="platform-content-paragraph">全面提升餐饮商品流通效率</div>
+				<div class="platform-content-paragraph">降低中小型餐饮企业(咖啡馆,西餐厅,茶馆等)采购成本</div>
+				<div class="platform-content-paragraph">促进餐饮业态的持续发展</div>
+				<div class="platform-content-paragraph">满足一切可能的客户需求</div>
+			</div>
+		</div>
+	</div>
+	<!-- 留言与返回顶部模块 -->
+	<div class="message-return">
+		<a href="#message-consultation" class="message-icon">
+			<img src="images/message.png" alt="留言" />
+		</a>
+		<a href="javascript:;" class="return-icon">
+			<img src="images/return_top.png" alt="返回顶部" />
+		</a>
+	</div>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.menu-level .menu-level-list:nth-child(3)')
+			.find('.menu-level2').slideToggle("fast")
+			.parent()
+			.siblings()
+			.find('.menu-level2').slideUp("fast");
+		})
+	</script>
+</body>
+</html>

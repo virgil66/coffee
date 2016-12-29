@@ -1,6 +1,5 @@
 @charset "utf-8";
 #join-us {
-  display: none;
   padding: 69px 31px 90px;
   box-sizing: border-box;
 }
@@ -59,7 +58,6 @@
 .join-us .us-contact .us-contact-modal .us-contact-information {
   width: 100%;
   *zoom: 1;
-  color: #494949;
 }
 .join-us .us-contact .us-contact-modal .us-contact-information:after {
   content: "";

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>关于品牌</title>
+	<link rel="icon" href="images/one_icon.png" type="image/png">
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="stylesheet" href="css/head.css">
+	<link rel="stylesheet" href="css/aboutBrand.css">
+	<script src="js/header.js"></script>
+</head>
+<body>
+	<!-- 关于品牌详细内容模块 -->
+	<div class="about-brand" id="about-brand">
+		<!-- 公司简介模块 -->
+		<div class="company-introduce" id="company-introduce">
+			<h1 class="level-heading-1">公司简介</h1>
+			<p class="introduce-content">
+				<span class="bold-font">壹杯加咖啡连锁店管理有限公司</span>是由国家工商总局核准，总部设立于上海虹桥互联网金融财富天地，是益倍嘉投资控股有限公司全资子公司。“壹杯加”为一家以商业、实业、金融业为背景的餐饮品牌，首期注册资金五千万元。致力于打造“咖啡+银行”模式的综合平台化咖啡连锁品牌，我们以咖啡店及银行相关配套服务为发展平台，并以此为基础发展出壹杯加创客空间、壹杯加咖啡俱乐部等，建立起一个集餐饮、休闲、创业、金融服务为一体的立体式多元化连锁基地
+			</p>
+			<p class="introduce-content">
+				<span class="bold-font">益倍嘉投资控股有限公司</span>是由国家工商总局核准的高科技创投企业，致力于高科创新项目和具备市场潜力企业的投资。集团秉承“创造价值，改革创新”的精神，坚持“平稳发展，务实创新”的经营理念，以新兴产业和战略投资为方向，逐渐发展为集高科技创新、金融服务及文化生活产业于一体的集团企业。帮助企业进行战略规划、资产管理，提供专业的投资、法律、市场资讯以及商务咨询等服务。集团致力于高科技创新、金融服务、文化生活三大板块业务，下辖20余家企业。
+			</p>
+		</div>
+		<!-- 品牌介绍详细内容模块 -->
+		<div class="brand-introduce" id="brand-introduce">
+			<h1 class="level-heading-1">品牌介绍</h1>
+			<h2 class="level-heading-2">品牌理念</h2>
+			<p class="introduce-content">1B+，1代表行业领先，B代表银行Bank，+ 代表无限的发展可能。</p>
+			<p class="introduce-content">1B+咖啡始终坚持“咖啡+银行”的发展模式，将银行服务加入传统咖啡店，既是咖啡店，又具备社区银行的功能，为咖啡店注入金融活力及公信力。在此之上，壹杯加咖啡正在逐步实现将更多当下大热的行业模式加入到“咖啡+银行”的平台之上，打造一个立体式多元化服务基地。</p>
+			<p class="introduce-content">当今这个信息化爆炸的时代，壹杯加咖啡摒弃单一发展模式，开创多元化跨界经营模式，势必开启餐饮实体经营的新篇章！</p>
+			<h2 class="level-heading-2">品牌定位</h2>
+			<p class="introduce-content">“咖啡+银行”为基础，发展集餐饮、休闲、创业、金融服务为一体的立体式多元化连锁餐饮集团。</p>
+			<h2 class="level-heading-2">品牌核心价值</h2>
+			<p class="introduce-content">“+”无限可能：① 可持续性增加多种经营领域，保持活力；② 迎合当今多元化发展社会，及时结合时下热门领域，持续创收。</p>
+			<p class="introduce-content">“咖啡+银行”平台：① 跨界新模式，根本区别于其他咖啡店；② 为咖啡店注入银行公信力，品牌形象力指数性增强； ③ 为咖啡客群提供更多更便捷的服务，提高顾客粘性；④ 吸引有银行业务需求的客源进店，扩大消费人群。</p>
+			<p class="introduce-content">俱乐部人脉资源：① 专门针对品牌加盟商、银行黑金卡用户及各个领域精英人群，人脉即钱脉；② 会员间资源的交互利用，把创业简单化，“互联”化。</p>
+			<h2 class="level-heading-2">目标人群</h2>
+			<p class="introduce-content">咖啡西餐爱好者、有银行金融服务需求的群体、各行业精英人士、其他对生活品质有追求的人。</p>
+		</div>
+		<!-- 战略合作伙伴详细内容模块 -->
+		<div class="partner" id="partner">
+			<h1 class="level-heading-1">战略合作伙伴</h1>
+			<div class="partner-pics">
+				<img src="images/partner.png" alt="战略合作伙伴" />
+			</div>
+		</div>
+	</div>
+	<!-- 留言与返回顶部模块 -->
+	<div class="message-return">
+		<a href="#message-consultation" class="message-icon">
+			<img src="images/message.png" alt="留言" />
+		</a>
+		<a href="javascript:;" class="return-icon">
+			<img src="images/return_top.png" alt="返回顶部" />
+		</a>
+	</div>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.menu-level .menu-level-list:nth-child(2)')
+			.find('.menu-level2').slideToggle("fast")
+			.parent()
+			.siblings()
+			.find('.menu-level2').slideUp("fast");
+		})
+	</script>
+</body>
+</html>

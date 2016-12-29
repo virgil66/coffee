@@ -1,6 +1,5 @@
 @charset "utf-8";
 #store-image {
-  display: none;
   padding-top: 49px;
   box-sizing: border-box;
 }
@@ -63,11 +62,9 @@
   width: 100%;
   padding: 50px 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 .store-image .image-content .image-content-groups {
   position: relative;
-  left: 0;
   width: 300%;
   height: auto;
   display: flex;
@@ -78,13 +75,13 @@
 }
 .store-image .image-content .image-content-groups .images-content-list {
   width: 100%;
-  padding: 0 32px;
-  box-sizing: border-box;
   flex: 1;
   -webkit-flex: 1;
   -moz-flex: 1;
   -o-flex: 1;
   -ms-flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 .store-image .image-content .image-content-groups .images-content-list > h1.level-heading-1 {
   color: #004e7e;

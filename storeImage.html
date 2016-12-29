@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>壹杯加咖啡</title>
+	<link rel="icon" href="images/one_icon.png" type="image/png">
+	<link rel="stylesheet" href="css/basic.css">
+	<link rel="stylesheet" href="css/head.css">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/aboutBrand.css">
+	<link rel="stylesheet" href="css/brandProject.css">
+	<link rel="stylesheet" href="css/storeImage.css">
+	<link rel="stylesheet" href="css/joinInformation.css">
+	<link rel="stylesheet" href="css/joinUs.css">
+	<link rel="stylesheet" href="css/message.css">
+	<script src="js/header.js"></script>
+</head>
+<body>
+	<!-- 门店形象详细内容模块 -->
+	<div class="store-image" id="store-image">
+		<div class="image-pics" id="image-pics">
+			<ul class="image-groups">
+				<li class="image-list">
+					<a href="javascript:;" class="image-links">
+						<img src="images/bg_15.jpg" alt="旗舰店" />
+					</a>
+				</li>
+				<li class="image-list">
+					<a href="javascript:;" class="image-links">
+						<img src="images/bg_05.jpg" alt="迷你店" />
+					</a>
+				</li>
+				<li class="image-list">
+					<a href="javascript:;" class="image-links">
+						<img src="images/bg_04.jpg" alt="标准店" />
+					</a>
+				</li>
+			</ul>
+			<ul class="image-circle">
+				<li class="on"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="image-content">
+			<ul class="image-content-groups">
+				<li class="images-content-list">
+					<h1 class="level-heading-1">旗舰店</h1>
+					<p class="image-content-address">
+						<img src="images/Positioning_blue.png" alt="定位" />
+						<span>上海市长宁区通协路272号5A-5C</span>
+					</p>
+					<p class="image-content-phone">
+						<img src="images/phone_blue.png" alt="联系电话" />
+						<span>021-61550507</span>
+					</p>
+				</li>
+				<li class="images-content-list">
+					<h1 class="level-heading-1">迷你店</h1>
+					<p class="image-content-address">
+						<img src="images/Positioning_blue.png" alt="定位" />
+						<span>上海市长宁区通协路272号5A-5C</span>
+					</p>
+					<p class="image-content-phone">
+						<img src="images/phone_blue.png" alt="联系电话" />
+						<span>021-61550507</span>
+					</p>
+				</li>
+				<li class="images-content-list">
+					<h1 class="level-heading-1">标准店</h1>
+					<p class="image-content-address">
+						<img src="images/Positioning_blue.png" alt="定位" />
+						<span>上海市长宁区通协路272号5A-5C</span>
+					</p>
+					<p class="image-content-phone">
+						<img src="images/phone_blue.png" alt="联系电话" />
+						<span>021-61550507</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 留言与返回顶部模块 -->
+	<div class="message-return">
+		<a href="message.html" class="message-icon">
+			<img src="images/message_01.png" alt="留言" />
+		</a>
+		<a href="javascript:;" class="return-icon">
+			<img src="images/return_top.png" alt="返回顶部" />
+		</a>
+	</div>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/script.js"></script>
+	<script>
+		$(document).ready(function(){
+			////////////////////
+			// 移动端手指滑动实现图片的轮播、门店形象 //
+			////////////////////
+			var i_iNow = 0, i_index = 1, i_startX = 0;
+			var image = document.getElementById('image-pics');
+
+			// 监听touchstart事件
+			image.addEventListener('touchstart',function(e){
+				e.preventDefault();
+				m_startX = e.targetTouches[0].pageX;
+			},false);
+
+			// 监听touchend事件
+			image.addEventListener('touchend',function(e){
+				e.preventDefault();
+				var m_width = $('.image-pics').width();   //获取可视化区域的宽度
+				var _l = m_width + $('.image-groups').position().left%m_width,
+					_w = m_width / 2,
+					_m = $('.image-pics .image-list').length - 1;
+				var m_left = $('.image-groups').position().left;   //重新获取left的值
+				// 中点判断
+				if(_l <= _w){
+					m_left = m_left - _l;
+				}else{
+					m_left = m_left + (m_width - _l);
+				}
+				if(m_left >= 0){
+					m_left = 0;
+				}else if(m_left < -m_width * _m){
+					m_left = -m_width * _m;
+				}
+				
+				$('.image-groups').animate({
+					left: m_left
+				},200);
+				$('.image-content-groups').animate({
+					left: m_left
+				},200);
+				var _now = parseInt(-m_left/m_width);
+				$('.image-pics').find('.image-circle >li').eq(_now).addClass('on').siblings('li').removeClass('on');
+				
+			},false);
+
+			image.addEventListener('touchmove',function(e){
+				e.preventDefault();
+				var touch = e.targetTouches[0];
+				var _l = $('.image-groups').position().left + touch.pageX - m_startX;
+				m_startX = touch.pageX;
+				$('.image-groups').css({
+					left: _l
+				});
+			},false);
+
+			$('.menu-level .menu-level-list:nth-child(4)')
+				.find('.menu-level2').slideToggle("fast")
+				.parent()
+				.siblings()
+				.find('.menu-level2').slideUp("fast");
+
+			
+		})
+	</script>
+</body>
+</html>
