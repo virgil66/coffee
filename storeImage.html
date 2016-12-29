@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/joinInformation.css">
 	<link rel="stylesheet" href="css/joinUs.css">
 	<link rel="stylesheet" href="css/message.css">
-	<script src="js/header.js"></script>
 </head>
 <body>
 	<!-- 门店形象详细内容模块 -->
@@ -91,9 +90,21 @@
 		</a>
 	</div>
 	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/head.js"></script>
 	<script src="js/script.js"></script>
 	<script>
 		$(document).ready(function(){
+			if(window.location.hash == "#2"){
+				$('.image-groups').animate({"left":-window.innerWidth},100);
+				$('.image-circle >li').eq(1).addClass('on').siblings('li').removeClass('on');
+				$('.image-content-groups').animate({"left":-window.innerWidth},100);
+			}
+
+			if(window.location.hash == "#3"){
+				$('.image-groups').animate({"left":-2 * window.innerWidth},100);
+				$('.image-circle >li').eq(2).addClass('on').siblings('li').removeClass('on');
+				$('.image-content-groups').animate({"left":-2 * window.innerWidth},100);
+			}
 			////////////////////
 			// 移动端手指滑动实现图片的轮播、门店形象 //
 			////////////////////

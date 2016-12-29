@@ -20,13 +20,18 @@
 
 	$menuBtn3.on('click',function(e){
 		var index = $(this).parents('.menu-level-list').index();   //获取menu-level2-list的祖辈menu-level-list的序列号
+		var index_ = $(this).index();
 		$menu
 			.addClass('menu-hide')
 			.removeClass('menu-show');
 
 		setTimeout(function(e){
 			$menuBtn.fadeIn("fast");
-		},500);
+		},300);
+		console.log(index_)
+		$('.image-groups').animate({"left":-index_ * window.innerWidth},100);
+		$('.image-circle >li').eq(index_).addClass('on').siblings('li').removeClass('on');
+		$('.image-content-groups').animate({"left":-index_ * window.innerWidth},100);
 
 	});
 	
@@ -123,12 +128,13 @@
 
 	//迷你店
 	$('.store-word-tail .mini-store-btn').click(function(e){
-		window.location.href = "storeImage.html";
+		window.location.href = "storeImage.html#2";
+		
 	});
 
 	//标准店
 	$('.store-word-tail .standard-store-btn').click(function(e){
-		window.location.href = "storeImage.html";
+		window.location.href = "storeImage.html#3";
 	});
    
 
