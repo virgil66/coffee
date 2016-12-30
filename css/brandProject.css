@@ -13,7 +13,7 @@
   width: 100%;
 }
 .brand-project .chain-stores .store-content {
-  padding: 22px 40px 50px;
+  padding: 22px 40px 0;
   box-sizing: border-box;
 }
 .brand-project .chain-stores .store-content h1.level-heading-1 {
@@ -65,12 +65,12 @@
 }
 .brand-project .training-college {
   width: 100%;
-  padding-top: 74px;
+  padding-top: 58px;
   box-sizing: border-box;
 }
 .brand-project .training-college .college-content {
   width: 100%;
-  padding: 0 40px 28px;
+  padding: 0 40px 0;
   box-sizing: border-box;
 }
 .brand-project .training-college .college-content h1.level-heading-1 {
@@ -103,7 +103,7 @@
 }
 .brand-project .coffee-bus .bus-content {
   width: 100%;
-  padding: 21px 40px 74px;
+  padding: 21px 40px 0;
   box-sizing: border-box;
 }
 .brand-project .coffee-bus .bus-content > h1.level-heading-1 {
@@ -123,7 +123,7 @@
 }
 .brand-project .online-platform .paltform-content {
   width: 100%;
-  padding: 0 40px 100px;
+  padding: 49px 40px 100px;
   box-sizing: border-box;
 }
 .brand-project .online-platform .paltform-content > h1.level-heading-1 {

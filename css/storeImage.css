@@ -60,8 +60,6 @@
 }
 .store-image .image-content {
   width: 100%;
-  padding: 50px 0;
-  box-sizing: border-box;
 }
 .store-image .image-content .image-content-groups {
   position: relative;

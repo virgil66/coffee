@@ -568,3 +568,26 @@
 .store-image .store-word .store-word-tail .store-tail-right .store-tail-coat .store-tail-content .store-tail-link > img {
   width: 12px;
 }
+@media screen and (max-width: 360px) {
+  .about-brand .brand-word .brand-word-left .brand-content {
+    margin: 21px 0 0 32px;
+  }
+  .about-brand .brand-word .brand-word-right .brand-btn {
+    margin: 62px 34px 28px 0;
+  }
+  .brand-project .project-word .project-word-left .project-content {
+    margin: 21px 0 0 32px;
+  }
+  .brand-project .project-word .project-word-right .project-btn {
+    margin: 111px 34px 28px 0;
+  }
+  .join-information .join-word .join-word-left .join-content {
+    margin: 21px 0 0 32px;
+  }
+  .join-information .join-word .join-word-right .join-btn {
+    margin: 90px 34px 35px 0;
+  }
+  .recruitment .recruitment-word .recruitment-word-right .recruitment-btn {
+    margin: 27px 34px 86px 0;
+  }
+}

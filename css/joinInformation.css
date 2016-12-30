@@ -47,7 +47,7 @@
   display: inline;
 }
 .join-information .assist-service {
-  padding-top: 71px;
+  padding-top: 58px;
   box-sizing: border-box;
 }
 .join-information .assist-service > h1.level-heading-1 {
@@ -73,7 +73,7 @@
   line-height: 1.5em;
 }
 .join-information .join-cost {
-  padding-top: 62px;
+  padding-top: 58px;
   padding-bottom: 62px;
   box-sizing: border-box;
 }
@@ -163,11 +163,6 @@
   border-left-width: 0px;
   border-left-style: solid;
   border-left-color: #666666;
-}
-.join-information .join-cost .cost-content .cost-content-paragraph:nth-child(1) .cost-para-top .cost-para-left,
-.join-information .join-cost .cost-content .cost-content-paragraph:nth-child(1) .cost-para-top .cost-para-right {
-  padding-top: 20px;
-  box-sizing: border-box;
 }
 .join-information .join-cost .cost-content .cost-content-paragraph:nth-child(1) .cost-para-top .cost-para-left > p,
 .join-information .join-cost .cost-content .cost-content-paragraph:nth-child(1) .cost-para-top .cost-para-right > p {
