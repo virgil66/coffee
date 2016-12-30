@@ -46,6 +46,7 @@
 	}
 	.image-content{
 		.width-max();
+		.overflow-x();
 		// .padding(50px 0);
 		.image-content-groups{
 			.pos(rel);
@@ -114,7 +115,8 @@
 }
 
 @media screen and (max-width: 360px){
-	.store-image{
+	#store-image{
+		.padding-bm(30px);
 		.image-content{
 			.image-content-groups{
 				.images-content-list{
@@ -133,5 +135,7 @@
 }
 
 @media screen and (min-width: 361px){
-	
+	#store-image{
+		.padding-bm(185px);
+	}
 }

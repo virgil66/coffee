@@ -8,13 +8,6 @@
 	<link rel="stylesheet" href="css/basic.css">
 	<link rel="stylesheet" href="css/head.css">
 	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/aboutBrand.css">
-	<link rel="stylesheet" href="css/brandProject.css">
-	<link rel="stylesheet" href="css/storeImage.css">
-	<link rel="stylesheet" href="css/joinInformation.css">
-	<link rel="stylesheet" href="css/joinUs.css">
-	<link rel="stylesheet" href="css/message.css">
-	
 </head>
 <body>
 	<!-- 壹杯加咖啡主页 -->
@@ -37,17 +30,17 @@
 						<img src="images/bar_icon_03.jpg" alt="浪漫风情意大利海鲜面" />
 					</a>
 				</li>
-				<li class="rotation-big-list">
+				<!-- <li class="rotation-big-list">
 					<a href="javascript:;" class="rotation-big-links">
 						<img src="images/bar_icon_04.jpg" alt="浪漫风情意大利海鲜面" />
 					</a>
-				</li>
+				</li> -->
 			</ul>
 			<ul class="rotation-small">
 				<li class="on"></li>
 				<li></li>
 				<li></li>
-				<li></li>
+				<!-- <li></li> -->
 			</ul>
 		</div>
 		<!-- 主页主题内容模块 -->
@@ -235,16 +228,17 @@
 		</div>
 	</div>
 	<!-- 留言与返回顶部模块 -->
-	<div class="message-return">
+	<!-- <div class="message-return">
 		<a href="message.html" class="message-icon">
 			<img src="images/message_01.png" alt="留言" />
 		</a>
 		<a href="javascript:;" class="return-icon">
 			<img src="images/return_top.png" alt="返回顶部" />
 		</a>
-	</div>
+	</div> -->
 	<script src="js/jquery-3.1.1.js"></script>
 	<script src="js/head.js"></script>
+	<script src="js/msgTop.js"></script>
 	<script src="js/script.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -257,13 +251,13 @@
 
 			// 监听touchstart事件
 			rotation.addEventListener('touchstart',function(e){
-				e.preventDefault();
+				// e.preventDefault();
 				m_startX = e.targetTouches[0].pageX;
 			},false);
 
 			// 监听touchend事件
 			rotation.addEventListener('touchend',function(e){
-				e.preventDefault();
+				// e.preventDefault();
 				var m_width = $('.rotation').width();   //获取可视化区域的宽度
 				var _l = m_width + $('.rotation-big').position().left%m_width,
 					_w = m_width / 2,
@@ -290,7 +284,7 @@
 			},false);
 
 			rotation.addEventListener('touchmove',function(e){
-				e.preventDefault();
+				// e.preventDefault();
 				var touch = e.targetTouches[0];
 				var _l = $('.rotation-big').position().left + touch.pageX - m_startX;
 				m_startX = touch.pageX;

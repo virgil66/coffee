@@ -15,7 +15,7 @@
 .rotation .rotation-big {
   position: relative;
   left: 0;
-  width: 400%;
+  width: 300%;
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;
@@ -40,7 +40,7 @@
   position: absolute;
   bottom: 20px;
   left: 50%;
-  margin-left: -53px;
+  margin-left: -40px;
 }
 .rotation .rotation-small > li {
   display: inline-block;
@@ -78,7 +78,7 @@
   width: 100%;
   padding: 0 0 8px 30px;
   box-sizing: border-box;
-  color: #004e7e;
+  color: #ffffff;
 }
 .about-brand .brand-pics .brand-pics-word .brand-word-ch {
   font-size: 30px;

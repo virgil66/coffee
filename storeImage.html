@@ -7,13 +7,7 @@
 	<link rel="icon" href="images/one_icon.png" type="image/png">
 	<link rel="stylesheet" href="css/basic.css">
 	<link rel="stylesheet" href="css/head.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/aboutBrand.css">
-	<link rel="stylesheet" href="css/brandProject.css">
 	<link rel="stylesheet" href="css/storeImage.css">
-	<link rel="stylesheet" href="css/joinInformation.css">
-	<link rel="stylesheet" href="css/joinUs.css">
-	<link rel="stylesheet" href="css/message.css">
 </head>
 <body>
 	<!-- 门店形象详细内容模块 -->
@@ -27,12 +21,12 @@
 				</li>
 				<li class="image-list">
 					<a href="javascript:;" class="image-links">
-						<img src="images/bg_06.jpg" alt="迷你店" />
+						<img src="images/bg_16.jpg" alt="迷你店" />
 					</a>
 				</li>
 				<li class="image-list">
 					<a href="javascript:;" class="image-links">
-						<img src="images/bg_06.jpg" alt="标准店" />
+						<img src="images/bg_17.jpg" alt="标准店" />
 					</a>
 				</li>
 			</ul>
@@ -81,16 +75,17 @@
 		</div>
 	</div>
 	<!-- 留言与返回顶部模块 -->
-	<div class="message-return">
+	<!-- <div class="message-return">
 		<a href="message.html" class="message-icon">
 			<img src="images/message_01.png" alt="留言" />
 		</a>
 		<a href="javascript:;" class="return-icon">
 			<img src="images/return_top.png" alt="返回顶部" />
 		</a>
-	</div>
+	</div> -->
 	<script src="js/jquery-3.1.1.js"></script>
 	<script src="js/head.js"></script>
+	<script src="js/msgTop.js"></script>
 	<script src="js/script.js"></script>
 	<script>
 		$(document).ready(function(){
@@ -113,13 +108,13 @@
 
 			// 监听touchstart事件
 			image.addEventListener('touchstart',function(e){
-				e.preventDefault();
+				// e.preventDefault();
 				m_startX = e.targetTouches[0].pageX;
 			},false);
 
 			// 监听touchend事件
 			image.addEventListener('touchend',function(e){
-				e.preventDefault();
+				// e.preventDefault();
 				var m_width = $('.image-pics').width();   //获取可视化区域的宽度
 				var _l = m_width + $('.image-groups').position().left%m_width,
 					_w = m_width / 2,
@@ -149,7 +144,7 @@
 			},false);
 
 			image.addEventListener('touchmove',function(e){
-				e.preventDefault();
+				// e.preventDefault();
 				var touch = e.targetTouches[0];
 				var _l = $('.image-groups').position().left + touch.pageX - m_startX;
 				m_startX = touch.pageX;
@@ -163,8 +158,6 @@
 				.parent()
 				.siblings()
 				.find('.menu-level2').slideUp("fast");
-
-			
 		})
 	</script>
 </body>

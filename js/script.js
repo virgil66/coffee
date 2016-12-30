@@ -1,9 +1,22 @@
 ;(function($){
 	
-	//header模块效果实现
+	/**
+	 * header模块效果实现
+	 */
 	$header = $('.header');   //header对象
 	$menuBtn = $header.find('.header-right'); //header-right对象
 
+
+	/**
+	 * [点击右侧菜单按钮，侧边菜单显示]
+	 * @param  {[type]} e){		
+	 *         $(this).fadeOut("fast");		
+	 *         $menu			
+	 *         		.addClass('menu-show')			
+	 *         		.removeClass('menu-hide');	
+	 *         } [description]
+	 * @return {[type]}                                                                                                [description]
+	 */
 	$menuBtn.on('click',function(e){
 		$(this).fadeOut("fast");
 		$menu
@@ -11,7 +24,9 @@
 			.removeClass('menu-hide');
 	})
 
-	//menu模块效果实现
+	/**
+	 * menu模块效果实现
+	 */
 	var $menu = $('.menu');  //menu对象
 	var $menuBtn2 = $menu.find('.menu-btn-groups');  //menu-btn-groups对象
 	var $level_1 = $menu.find('.menu-level .menu-level-links');  //menu-level下的menu-level-links对象
@@ -35,6 +50,13 @@
 
 	});
 	
+	/**
+	 * [点击logo按钮，右侧菜单栏部分收起]
+	 * @param  {[参数]} e){		
+	 *         var flag  [boolean类型]
+	 * @param  {[延时的时间]} 300);		}	} [description]
+	 * @return {[无]}              [description]
+	 */
 	$('.header .header-left').on('click',function(e){
 		var flag = $menu.hasClass('menu-show');
 		if(flag){
@@ -71,33 +93,137 @@
 		
 	});
 
-	//刷新页面时，页面保留在当前页面
-	var objType2 = {
-					"0":"#home",
-					"1":"#about-brand",
-					"2":"#brand-project",
-					"3":"#store-image",
-					"4":"#join-information",
-					"5":"#join-us",
-					"6":"#message-consultation"
-	}
-
-	//侧边菜单在现实的状态下再次隐藏
+	/**
+	 * 侧边菜单在显示的状态下再次隐藏
+	 */
 	$menuBtn2.on('click',function(e){
 		$(this)
 			.parents('.menu')
-			.removeClass('menu-hide')
+			.removeClass('menu-show')
 			.addClass('menu-hide');
 
 		setTimeout(function(e){
 			$menuBtn.fadeIn("fast");
 
 		},300);
-	})
+	});
+
+	/**
+	 * 点击index页面中的home部分，侧边菜单隐藏
+	 */
+	$('.home').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
+
+	/**
+	 * 点击关于品牌页面中的about-brand部分，侧边菜单隐藏
+	 */
+	$('.about-brand').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
+
+	/**
+	 * 点击品牌项目页面中的brand-project部分，侧边菜单隐藏
+	 */
+	$('.brand-project').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
+
+	/**
+	 * 点击门店形象页面中的store-image部分，侧边菜单隐藏
+	 */
+	$('.store-image').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
+
+	/**
+	 * 点击加盟咨询页面中的join-information部分，侧边菜单隐藏
+	 */
+	$('.join-information').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
+
+	/**
+	 * 点击加入我们页面中的join-us部分，侧边菜单隐藏
+	 */
+	$('.join-us').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
+
+	/**
+	 * 点击留言咨询页面中的message-consultation部分，侧边菜单隐藏
+	 */
+	$('.message-consultation').on('click',function(e){
+		var flag = $(this).siblings('.menu').hasClass('menu-show');
+		if(flag){
+			$(this)
+				.siblings('.menu')
+				.removeClass('menu-show')
+				.addClass('menu-hide');
+			setTimeout(function(e){
+				$menuBtn.fadeIn("fast");
+			},300);
+		}
+	});
 	
 
-
-	//home模块
+	/**
+	 * home模块
+	 */
 	var $home = $('.home');  //home对象
 	var $homeBody = $home.find('.home-body');  //获取home-body
 	var $brandBtn = $homeBody.find('.about-brand .brand-btn'); //获取about-brand 下的brand-btn
@@ -112,8 +238,9 @@
 	var size = $home.find('.rotation-big-list').length;   //获取总共图片的个数
 
 
-
-	//门店形象模块效果实现
+	/**
+	 * 门店形象模块效果实现
+	 */
 	var $image = $('.store-image');  //store-image对象
 	var copy_image1 = $image.find('.image-groups .image-list').first().clone();  //复制image中图片的第一张
 	// $image.find('.image-groups').append(copy_image1);  //将复制的第一张图片粘贴到image-groups中
@@ -121,71 +248,90 @@
 	// $image.find('.image-content-groups').append(copy_image2);  //将复制的第一部分文字粘贴到image-content-groups中
 	var size_ = $image.find('.image-groups .image-list').length;  //获取图片的张数
 
-	//旗舰店
+	/**
+	 * 点击旗舰店，实现页面从首页跳转到门店形象页面的旗舰店
+	 */
 	$('.store-word-header .flagship-store-btn').click(function(e){
 		window.location.href = "storeImage.html";
 	});
 
-	//迷你店
+
+	/**
+	 * 点击迷你店，实现页面从首页跳转到门店形象页面的迷你店
+	 */
 	$('.store-word-tail .mini-store-btn').click(function(e){
 		window.location.href = "storeImage.html#2";
 		
 	});
 
-	//标准店
+	/**
+	 * 点击标准店，实现页面从首页跳转到门店形象页面的标准店
+	 */
 	$('.store-word-tail .standard-store-btn').click(function(e){
 		window.location.href = "storeImage.html#3";
 	});
    
 
-   //////////////
-   // 留言资讯数据传输 //
-   //////////////
+	/**
+	 * 留言资讯数据传输
+	 */
    var $msg = $('#message-consultation');  //获取message-consultation对象
    var $msgBtn = $msg.find('.message-btn');  //获取message-btn对象
+   var $confirm = $('.msg-bomb .bomb-btn');
 
-   /////////////////
-   // 点击按钮提交数据的实现 //
-   /////////////////
+
+   /**
+    * 点击确定按钮，提示框消失
+    */
+   $confirm.on('click',function(e){
+   		$(this)
+   			.parents('.msg-bomb')
+   			.hide();
+   });
+
+
+   /**
+    * 点击按钮提交数据的实现
+    */
    $msgBtn.on('click',function(){
    		if(dataJudgment()){
    			$.ajax({
-   				url: "",
+   				url: "http://www.1bpcafe.cn/api/message",
    				type: "post",
    				data: $('#message-content').serialize(),
    				success: function(data){
-
+   					alert("提交成功");
    				},
    				error:function(data) {
-   					
+   					alert("请求失败，请稍后重试！");
    				}
    			})
    		}
    });
 
 
-   //////////////
-   // 输入框的判断实现 //
-   //////////////
+   /**
+    *  输入框的判断实现 
+    */
    function dataJudgment(){
-   		var userName = $msg.find('input[name=userName]');
-   		var eMail = $msg.find('input[name=userEmail]');
-   		var phone = $msg.find('input[name=userPhone]');
-   		var text = $msg.find('textarea[name=userMessage]');
+   		var userName = $msg.find('input[name=name]');
+   		var eMail = $msg.find('input[name=email]');
+   		var phone = $msg.find('input[name=tel]');
+   		var message = $msg.find('textarea[name=message]');
    		var str_userName = "姓名";
    		var str_eMail = "E-mail";
    		var str_phone = "手机号";
    		var str_tx = "留言";
-   		if(nameNotNull(userName,text,str_userName,str_tx) && isMail(eMail,str_eMail) && isMobile(phone,str_phone)){
+   		if(isNotNull(userName,str_userName) && isMail(eMail,str_eMail) && isMobile(phone,str_phone) && textLength(message,str_tx)){
    			return true;
    		}else{
    			return false;
    		}
    }
 
-   /////////////
-   // 输入框内容为空 //
-   /////////////
+   /**
+    * 输入框内容为空
+    */
    function isNull(obj){
    		if(trim(obj.val()).length == 0){
    			return true;
@@ -194,9 +340,10 @@
    		}
    }
 
-   //////////////
-   // 表单内容不能为空 //
-   //////////////
+
+   /**
+    * 表单内容不能为空
+    */
    function isNotNull(obj,str){
    		if(isNull(obj)){
    			alert(str+"不能为空！");
@@ -207,23 +354,25 @@
    		}
    }
 
-   function nameNotNull(obj1,obj2,str1,str2){
-   		if(isNull(obj1)){
-   			alert(str1+"不能为空！");
-   			obj1.focus();
-   			return false;
-   		}else if(isNull(obj2)){
-   			alert(str2+"不能为空！");
-   			obj2.focus();
+   function textLength(obj,str){
+   		if(!isNotNull(obj,str)){
+	    	return false;  
+	    } 
+
+   		if(!isNull(obj) && trim(obj.val()).length > 200){
+   			alert(str+"的长度不能超过200！");
+   			console.log(obj.val().length);
+   			obj.focus();
    			return false;
    		}else{
    			return true;
    		}
+
    }
 
-   ////////////////
-   // 判断邮件地址是否合法 //
-   ////////////////
+   /**
+    * 判断邮件地址是否合法
+    */
    function isMail(obj,str){
    		var pattern = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;  
 	    if(!isNotNull(obj,str)){
@@ -239,9 +388,9 @@
 	    }
    }
 
-   //////////////
-   // 手机号码的有效性 //
-   //////////////
+   /**
+    * 判断手机号码的有效性
+    */
    function isMobile(obj,str){
    		var pattern = /^1[34578]\d{9}$/;
    		if(!isNotNull(obj,str)){
@@ -256,24 +405,21 @@
 	    }
    }
 
-   ///////////////////////
-   // trim函数，去除字符串两侧的空格 //
-   ///////////////////////
+
+   /**
+    * trim函数，去除字符串两侧的空格
+    */
    function trim(obj){
    		return $.trim(obj);
    }
-   //点击返回顶部按钮，页面返回顶部
+
+   /**
+    * 点击返回顶部按钮，页面返回顶部
+    */
    var $magReturn = $('.message-return');  //获取message-return对象
    var $magBtn = $magReturn.find('.message-icon');  //获取message-icon对象
    var $returnBtn = $magReturn.find('.return-icon');  //获取return-icon对象
 
-   //点击message-icon按钮时，显示留言咨询页面
-   // $magBtn.on('click',function(e){
-   // 		$magReturn.hide();
-   // 		$('#message-consultation')
-   // 								.show()
-   // 								.siblings().hide();
-   // });
    //return-icon点击时，页面返回顶部
    $returnBtn.on('click',function(e){
    		$('body').scrollTop(0);

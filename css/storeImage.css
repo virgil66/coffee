@@ -60,6 +60,7 @@
 }
 .store-image .image-content {
   width: 100%;
+  overflow-x: hidden;
 }
 .store-image .image-content .image-content-groups {
   position: relative;
@@ -144,8 +145,18 @@
   }
 }
 @media screen and (max-width: 360px) {
-  .store-image .image-content .image-content-groups .images-content-list .image-content-address > span {
+  #store-image {
+    padding-bottom: 30px;
+    box-sizing: border-box;
+  }
+  #store-image .image-content .image-content-groups .images-content-list .image-content-address > span {
     margin-left: 32px;
     margin-top: -24px;
+  }
+}
+@media screen and (min-width: 361px) {
+  #store-image {
+    padding-bottom: 185px;
+    box-sizing: border-box;
   }
 }

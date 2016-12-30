@@ -1,5 +1,8 @@
 ;(function($){
-
+	/**
+	 * [头部header和右侧菜单栏]
+	 * @type {[type]}
+	 */
 	var head = $("<div class='header'>"
 					+"<a href='index.html'>"
 						+"<img src='images/logo_01.png' alt='壹杯加咖啡' class='header-left' />"

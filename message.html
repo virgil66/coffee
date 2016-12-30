@@ -7,12 +7,6 @@
 	<link rel="icon" href="images/one_icon.png" type="image/png">
 	<link rel="stylesheet" href="css/basic.css">
 	<link rel="stylesheet" href="css/head.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel="stylesheet" href="css/aboutBrand.css">
-	<link rel="stylesheet" href="css/brandProject.css">
-	<link rel="stylesheet" href="css/storeImage.css">
-	<link rel="stylesheet" href="css/joinInformation.css">
-	<link rel="stylesheet" href="css/joinUs.css">
 	<link rel="stylesheet" href="css/message.css">
 </head>
 <body>
@@ -23,22 +17,31 @@
 			<form class="message-content" id="message-content">
 				<div class="message-name">
 					<label>姓名</label>
-					<input type="text" name="userName" />
+					<input type="text" name="name" />
 				</div>
 				<div class="message-email">
 					<label>E-mail</label>
-					<input type="text" name="userEmail" />
+					<input type="email" name="email" />
 				</div>
 				<div class="message-phone">
 					<label>手机号</label>
-					<input type="text" name="userPhone" />
+					<input type="tel" name="tel" />
 				</div>
 				<div class="message-information">
 					<label>留言</label>
-					<textarea name="userMessage" type="text"></textarea>
+					<textarea name="message" type="text"></textarea>
 				</div>
 				<div class="message-btn">提交</div>
 			</form>
+		</div>
+	</div>
+	<!-- 信息提示框模块 -->
+	<div class="msg-bomb">
+		<div class="bomb-bg"></div>
+		<div class="bomb-box">
+			<img src="images/bomb_icon_02.png" alt="信息提交成功" class="msg-success" />
+			<p class="msg-content">提交成功</p>
+			<div class="bomb-btn">确定</div>
 		</div>
 	</div>
 	<script src="js/jquery-3.1.1.js"></script>

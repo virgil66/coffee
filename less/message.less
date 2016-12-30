@@ -76,3 +76,53 @@
 		}
 	}
 }
+
+.msg-bomb{
+	.display(n);
+	.pos(fix);
+	.top(0);
+	.left(0);
+	.z-index(1);
+	.width-max();
+	.height(100%);
+	.bomb-bg{
+		.pos(abs);
+		.top(0);
+		.left(0);
+		.width-max();
+		.height(100%);
+		.bgColor(#000);
+		.opa(8);
+	}
+	.bomb-box{
+		.pos(abs);
+		.top(50%);
+		.left(50%);
+		.margin-tp(-80px);
+		.margin-lt(-125px);
+		.width(250px);
+		.height(auto);
+		.bgColor(@white);
+		.border-radius(4px);
+		>img.msg-success{
+			.width(125px);
+			.margin(-48px 69.5px 10px 55.5px);
+		}
+		>p.msg-content{
+			.text-al(center);
+			.padding(0 10px);
+			.fontSize(18px);
+			.color(@com_color);
+		}
+		.bomb-btn{
+			.fontSize(@b_heigth / 2);
+			.bgColor(@rm_sBg);
+			.color(@white);
+			.margin(10px auto);
+			.text-al(center);
+			.width(146px);
+			.line-height(38px);
+			.border-radius(4px);
+		}
+	}
+}
