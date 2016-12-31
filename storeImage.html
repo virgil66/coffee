@@ -144,7 +144,7 @@
 			},false);
 
 			image.addEventListener('touchmove',function(e){
-				// e.preventDefault();
+				e.preventDefault();
 				var touch = e.targetTouches[0];
 				var _l = $('.image-groups').position().left + touch.pageX - m_startX;
 				m_startX = touch.pageX;

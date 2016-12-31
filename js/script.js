@@ -1,5 +1,19 @@
 ;(function($){
-	
+
+	/**
+	 * [url 页面的URL值]
+	 * @type {[type]}
+	 */
+	var url = window.location.toString();
+	var id = url.split("#")[1];
+	if(id){
+		var t = $("#" + id).offset().top;
+		$('html,body').animate({
+			scrollTop: t
+		},300);
+	}
+
+
 	/**
 	 * header模块效果实现
 	 */
@@ -43,6 +57,9 @@
 		setTimeout(function(e){
 			$menuBtn.fadeIn("fast");
 		},300);
+		// $('html,body').animate({
+		// 	scrollTop: $('window.location.hash').offset().top
+		// })
 		$('.image-groups').animate({"left":-index_ * window.innerWidth},100);
 		$('.image-circle >li').eq(index_).addClass('on').siblings('li').removeClass('on');
 		$('.image-content-groups').animate({"left":-index_ * window.innerWidth},100);
