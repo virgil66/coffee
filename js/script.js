@@ -43,7 +43,6 @@
 		setTimeout(function(e){
 			$menuBtn.fadeIn("fast");
 		},300);
-		console.log(index_)
 		$('.image-groups').animate({"left":-index_ * window.innerWidth},100);
 		$('.image-circle >li').eq(index_).addClass('on').siblings('li').removeClass('on');
 		$('.image-content-groups').animate({"left":-index_ * window.innerWidth},100);
@@ -260,7 +259,7 @@
 	 * 点击迷你店，实现页面从首页跳转到门店形象页面的迷你店
 	 */
 	$('.store-word-tail .mini-store-btn').click(function(e){
-		window.location.href = "storeImage.html#2";
+		window.location.href = "storeImage.html#mini-store";
 		
 	});
 
@@ -268,7 +267,7 @@
 	 * 点击标准店，实现页面从首页跳转到门店形象页面的标准店
 	 */
 	$('.store-word-tail .standard-store-btn').click(function(e){
-		window.location.href = "storeImage.html#3";
+		window.location.href = "storeImage.html#standard-store";
 	});
    
 
@@ -422,6 +421,8 @@
 
    //return-icon点击时，页面返回顶部
    $returnBtn.on('click',function(e){
-   		$('body').scrollTop(0);
+   		$('html,body').animate({
+   			scrollTop: $('body').offset().top
+   		},500);
    })
 })(jQuery);

@@ -89,16 +89,16 @@
 	<script src="js/script.js"></script>
 	<script>
 		$(document).ready(function(){
-			if(window.location.hash == "#2"){
-				$('.image-groups').animate({"left":-window.innerWidth},100);
+			if(window.location.hash == "#mini-store"){
+				$('.image-groups').css({"left":-window.innerWidth},100);
 				$('.image-circle >li').eq(1).addClass('on').siblings('li').removeClass('on');
-				$('.image-content-groups').animate({"left":-window.innerWidth},100);
+				$('.image-content-groups').css({"left":-window.innerWidth},100);
 			}
 
-			if(window.location.hash == "#3"){
-				$('.image-groups').animate({"left":-2 * window.innerWidth},100);
+			if(window.location.hash == "#standard-store"){
+				$('.image-groups').css({"left":-2 * window.innerWidth},100);
 				$('.image-circle >li').eq(2).addClass('on').siblings('li').removeClass('on');
-				$('.image-content-groups').animate({"left":-2 * window.innerWidth},100);
+				$('.image-content-groups').css({"left":-2 * window.innerWidth},100);
 			}
 			////////////////////
 			// 移动端手指滑动实现图片的轮播、门店形象 //
