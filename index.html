@@ -241,7 +241,7 @@
 	<script src="js/msgTop.js"></script>
 	<script src="js/script.js"></script>
 	<script src="http://zeptojs.com/zepto.min.js"></script>
-	<script src="js/mini.js"></script>
+	<script src="js/rotation.js"></script>
 	<script>
 		// $(document).ready(function(){
 		// 	////////////////////
@@ -305,7 +305,7 @@
 		*/
 		var scrollImg = $.mggScrollImg('.rotation .rotation-big',{
 		        loop : true,//循环切换
-		        auto : false,//自动切换
+		        auto : true,//自动切换
 		        callback : function(ind){//这里传过来的是索引值
 		            $('.rotation-small li').eq(ind).addClass('on').siblings('li').removeClass('on');
 		        }

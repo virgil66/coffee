@@ -21,7 +21,7 @@ function mggScrollImg(box,config){
     this.loop = this.config.loop||true;//默认能循环滚动
     this.auto = this.config.auto||true;//默认自动滚动
     this.auto_wait_time = this.config.auto_wait_time||3000;//轮播间隔
-    this.scroll_time = 300;//滚动时长
+    this.scroll_time = 500;//滚动时长
     this.minleft = -this.width*(this.size-1);//最小left值，注意是负数[不循环情况下的值]
     this.maxleft =0;//最大lfet值[不循环情况下的值]
     this.now_left = 0;//初始位置信息[不循环情况下的值]
