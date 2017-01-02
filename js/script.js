@@ -14,6 +14,7 @@
 	}
 
 
+
 	/**
 	 * header模块效果实现
 	 */
@@ -48,6 +49,7 @@
 
 
 	$menuBtn3.on('click',function(e){
+		// e.preventDefault();
 		var index = $(this).parents('.menu-level-list').index();   //获取menu-level2-list的祖辈menu-level-list的序列号
 		var index_ = $(this).index();
 		$menu

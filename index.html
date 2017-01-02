@@ -240,59 +240,77 @@
 	<script src="js/head.js"></script>
 	<script src="js/msgTop.js"></script>
 	<script src="js/script.js"></script>
+	<script src="http://zeptojs.com/zepto.min.js"></script>
+	<script src="js/mini.js"></script>
 	<script>
-		$(document).ready(function(){
-			////////////////////
-			// 移动端手指滑动实现图片的轮播、首页 //
-			////////////////////
-			var m_iNow = 0, m_index = 1, m_startX = 0;
-			var rotation = document.getElementById('rotation');
-			var rotationBig = $('#rotation').find('.rotation-big');
+		// $(document).ready(function(){
+		// 	////////////////////
+		// 	// 移动端手指滑动实现图片的轮播、首页 //
+		// 	////////////////////
+		// 	var m_iNow = 0, m_index = 1, m_startX = 0;
+		// 	var rotation = document.getElementById('rotation');
+		// 	var rotationBig = $('#rotation').find('.rotation-big');
 
-			// 监听touchstart事件
-			rotation.addEventListener('touchstart',function(e){
-				// e.preventDefault();
-				m_startX = e.targetTouches[0].pageX;
-			},false);
+		// 	// 监听touchstart事件
+		// 	rotation.addEventListener('touchstart',function(e){
+		// 		// e.preventDefault();
+		// 		m_startX = e.targetTouches[0].pageX;
+		// 	},false);
 
-			// 监听touchend事件
-			rotation.addEventListener('touchend',function(e){
-				// e.preventDefault();
-				var m_width = $('.rotation').width();   //获取可视化区域的宽度
-				var _l = m_width + $('.rotation-big').position().left%m_width,
-					_w = m_width / 2,
-					_m = $('.rotation .rotation-big-list').length - 1;
-				var m_left = $('.rotation-big').position().left;   //重新获取left的值
-				// 中点判断
-				if(_l <= _w){
-					m_left = m_left - _l;
-				}else{
-					m_left = m_left + (m_width - _l);
-				}
-				if(m_left >= 0){
-					m_left = 0;
-				}else if(m_left < -m_width * _m){
-					m_left = -m_width * _m;
-				}
+		// 	// 监听touchend事件
+		// 	rotation.addEventListener('touchend',function(e){
+		// 		// e.preventDefault();
+		// 		var m_width = $('.rotation').width();   //获取可视化区域的宽度
+		// 		var _l = m_width + $('.rotation-big').position().left%m_width,
+		// 			_w = m_width / 2,
+		// 			_m = $('.rotation .rotation-big-list').length - 1;
+		// 		var m_left = $('.rotation-big').position().left;   //重新获取left的值
+		// 		// 中点判断
+		// 		if(_l <= _w){
+		// 			m_left = m_left - _l;
+		// 		}else{
+		// 			m_left = m_left + (m_width - _l);
+		// 		}
+		// 		if(m_left >= 0){
+		// 			m_left = 0;
+		// 		}else if(m_left < -m_width * _m){
+		// 			m_left = -m_width * _m;
+		// 		}
 				
-				$('.rotation-big').animate({
-					left: m_left
-				},200);
-				var _now = parseInt(-m_left/m_width);
-				$('.rotation').find('.rotation-small >li').eq(_now).addClass('on').siblings('li').removeClass('on');
+		// 		$('.rotation-big').animate({
+		// 			left: m_left
+		// 		},200);
+		// 		var _now = parseInt(-m_left/m_width);
+		// 		$('.rotation').find('.rotation-small >li').eq(_now).addClass('on').siblings('li').removeClass('on');
 				
-			},false);
+		// 	},false);
 
-			rotation.addEventListener('touchmove',function(e){
-				e.preventDefault();
-				var touch = e.targetTouches[0];
-				var _l = $('.rotation-big').position().left + touch.pageX - m_startX;
-				m_startX = touch.pageX;
-				$('.rotation-big').css({
-					left: _l
-				});
-			},false);
-		})
+		// 	rotation.addEventListener('touchmove',function(e){
+		// 		e.preventDefault();
+		// 		var touch = e.targetTouches[0];
+		// 		var _l = $('.rotation-big').position().left + touch.pageX - m_startX;
+		// 		m_startX = touch.pageX;
+		// 		$('.rotation-big').css({
+		// 			left: _l
+		// 		});
+		// 	},false);
+		// });
+
+		(function(){
+			/*
+		    注意：$.mggScrollImg返回的scrollImg对象上有
+		            next，prev，go三个方法，可以实现外部对滚动索引的控制。
+		    如：scrollImg.next();//会切换到下一张图片
+		        scrollImg.go(0);//会切换到第一张图片
+		*/
+		var scrollImg = $.mggScrollImg('.rotation .rotation-big',{
+		        loop : true,//循环切换
+		        auto : false,//自动切换
+		        callback : function(ind){//这里传过来的是索引值
+		            $('.rotation-small li').eq(ind).addClass('on').siblings('li').removeClass('on');
+		        }
+		    });
+		})()
 	</script>
 </body>
 </html>

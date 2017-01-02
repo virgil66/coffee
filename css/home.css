@@ -21,6 +21,7 @@
   display: -moz-flex;
   display: -o-flex;
   display: -ms-flex;
+  -wbkit-transform: translated(0, 0, 0);
 }
 .rotation .rotation-big .rotation-big-list {
   flex: 1;
